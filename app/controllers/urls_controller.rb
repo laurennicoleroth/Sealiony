@@ -9,13 +9,11 @@ class UrlsController < ApplicationController
   def create
     url = Url.new(url_params)
     if url.save
-      shortened = shorten(url.address)
-      url.update(short_url: shortened)
       redirect_to "/"
     else
       [500, "There is a problem with the url."]
       flash[:error] = "There is a problem with the url."
-      redirect_to new_url_path
+      redirect_to '/'
     end
   end
 

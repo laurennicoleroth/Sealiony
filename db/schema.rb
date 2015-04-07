@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20150407150042) do
     t.datetime "updated_at",              null: false
   end
 
+  add_index "urls", ["short_url"], name: "index_urls_on_short_url", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name",      null: false
     t.string   "email",           null: false
