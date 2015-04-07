@@ -20,7 +20,11 @@ class UrlsController < ApplicationController
 
   def count
     @url = Url.find(params[:id])
-
+    if @url
+      p @url.click_count += 1
+      @url.save
+    end
+    redirect_to @url.address
   end
 
   def show

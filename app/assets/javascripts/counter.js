@@ -1,11 +1,13 @@
 $(document).ready(function(){
-  $(".short_url").on('click', function(){
-    var request = {
-      url: target.action,
-      method: 'count',
-    }
-    $.ajax(request).done;
-  });
+  // $(".short_url").on('click', function(event){
+  //   event.preventDefault();
+  //   var request = {
+  //     url: $(event.target).attr('href'),
+  //     method: 'put',
+  //   }
+  //   console.log(request);
+  //   $.ajax(request).done;
+  // });
 
 
 
