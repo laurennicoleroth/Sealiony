@@ -18,6 +18,11 @@ class UrlsController < ApplicationController
     end
   end
 
+  def count
+    @url = Url.find(params[:id])
+
+  end
+
   def show
   end
 
