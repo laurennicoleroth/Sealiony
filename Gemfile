@@ -39,6 +39,9 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'selenium-webdriver', '~> 2.44'
+  gem 'chromedriver-helper'
+
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
