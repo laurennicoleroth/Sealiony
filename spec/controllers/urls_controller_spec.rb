@@ -14,4 +14,9 @@ describe UrlsController do
     expect(Url.last.address).to eq("https://www.google.com")
   end
 
+  it "should not create a url when params are invalid" do
+    params = { url: {address:"blkafklsdfjkldfslf"}}
+    post(:create, params)
+    expect(:create).to raise_error
+  end
 end
